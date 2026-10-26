@@ -1,0 +1,25 @@
+{
+  "name": "给小天使磕一个",
+  "short_name": "磕一个",
+  "description": "轻点小天使的头像，诚心 +1。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fdf8f6",
+  "theme_color": "#fdf8f6",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
