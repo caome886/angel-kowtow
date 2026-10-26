@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fdf8f6">
+  <meta name="description" content="轻点小天使的头像，诚心 +1。看看全世界一起磕了多少下。">
+  <link rel="canonical" href="https://caome886.github.io/angel-kowtow/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="小天使祈愿所">
+  <meta property="og:title" content="给小天使磕一个">
+  <meta property="og:description" content="轻点一下，诚心 +1。看看全世界一起磕了多少下。">
+  <meta property="og:url" content="https://caome886.github.io/angel-kowtow/">
+  <meta property="og:image" content="https://caome886.github.io/angel-kowtow/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="给小天使磕一个">
+  <meta name="twitter:description" content="轻点一下，诚心 +1。看看全世界一起磕了多少下。">
+  <meta name="twitter:image" content="https://caome886.github.io/angel-kowtow/og-card.jpg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="磕一个">
+  <title>给小天使磕一个</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" as="image" href="angel.webp" type="image/webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <span class="wash wash-a"></span>
+    <span class="wash wash-b"></span>
+    <span class="wash wash-c"></span>
+    <span class="cloud cloud-a"></span>
+    <span class="cloud cloud-b"></span>
+    <span class="cloud cloud-c"></span>
+    <span class="spark spark-a">✦</span>
+    <span class="spark spark-b">✧</span>
+    <span class="spark spark-c">✦</span>
+    <span class="spark spark-d">✧</span>
+    <span class="petal petal-a"></span>
+    <span class="petal petal-b"></span>
+    <span class="petal petal-c"></span>
+  </div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>小天使祈愿所</span>
+      </div>
+      <button class="sound-btn" id="soundBtn" type="button" aria-label="关闭音效" aria-pressed="true">
+        <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9.5v5h3.2l4.3 3.6V5.9L7.2 9.5H4Z" />
+          <path d="M15 8.6a4.7 4.7 0 0 1 0 6.8M17.8 5.8a8.6 8.6 0 0 1 0 12.4" />
+        </svg>
+        <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9.5v5h3.2l4.3 3.6V5.9L7.2 9.5H4Z" />
+          <path d="m16 9 5 5m0-5-5 5" />
+        </svg>
+      </button>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow"><span></span> 今日份的诚心 <span></span></p>
+      <h1>磕一个，<br><em>愿望</em>就近一点</h1>
+      <p class="hint">轻点她的小脑袋，或整个头像</p>
+    </section>
+
+    <section class="stage" id="stage" role="button" tabindex="0" aria-label="轻点头像或小脑袋，磕一个">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="avatar-wrap">
+        <div class="avatar" id="avatar">
+          <picture>
+            <source srcset="angel.webp" type="image/webp">
+            <img src="angel.png" width="450" height="475" alt="黑发、白裙、带小翅膀的天使女孩" draggable="false" fetchpriority="high">
+          </picture>
+          <span class="head-hit" aria-hidden="true"></span>
+        </div>
+        <span class="avatar-shadow" aria-hidden="true"></span>
+      </div>
+
+      <div class="tap-chip" id="tapChip" aria-hidden="true">
+        <span class="tap-pulse"></span>
+        <span>点这里</span>
+      </div>
+
+      <div class="impact" id="impact" aria-hidden="true">咚</div>
+      <div class="particles" id="particles" aria-hidden="true"></div>
+      <div class="ripples" id="ripples" aria-hidden="true"></div>
+    </section>
+
+    <section class="stats" aria-label="求数统计">
+      <article class="stat stat-total">
+        <div class="stat-top">
+          <span class="stat-label">累计求数</span>
+          <span class="scope" id="scope"><i></i>全世界</span>
+        </div>
+        <p class="stat-value"><span id="total">0</span><span class="unit">次</span></p>
+        <p class="stat-note" id="totalNote">和所有来访的人一起磕</p>
+      </article>
+
+      <article class="stat stat-today">
+        <div class="stat-top">
+          <span class="stat-label">今日已求</span>
+          <span class="today-date" id="todayDate">10.26</span>
+        </div>
+        <p class="stat-value"><span id="today">0</span><span class="unit">次</span></p>
+        <p class="stat-note">每天 00:00 重新计数</p>
+      </article>
+    </section>
+
+    <footer class="footer">愿你所求，皆有回响</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
